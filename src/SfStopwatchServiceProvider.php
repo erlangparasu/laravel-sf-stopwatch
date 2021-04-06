@@ -17,18 +17,18 @@ class SfStopwatchServiceProvider extends ServiceProvider
     {
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../resources/config/laravel-sf_stopwatch.php' => config_path('laravel-sf_stopwatch.php'),
+                __DIR__ . '/../resources/config/sf-stopwatch.php' => config_path('sf-stopwatch.php'),
             ]);
         } elseif ($this->app instanceof LumenApplication) {
-            $this->app->configure('laravel-sf_stopwatch');
+            $this->app->configure('sf-stopwatch');
         }
     }
 
     public function register()
     {
-        $this->app->bind('sf_stopwatch', function ($app) {
+        $this->app->singleton('sf_stopwatch', function ($app) {
             return new SfStopwatch(
-                config('laravel-sf_stopwatch.server_key')
+                config('sf-stopwatch.sf_stopwatch_enabled')
             );
         });
     }

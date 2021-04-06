@@ -6,3 +6,10 @@ if (!function_exists('sfsw')) {
         return app('sf_stopwatch');
     }
 }
+
+if (!function_exists('sf_stopwatch')) {
+    function sf_stopwatch()
+    {
+        return app('sf_stopwatch');
+    }
+}

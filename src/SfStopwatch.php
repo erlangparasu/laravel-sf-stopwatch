@@ -8,13 +8,13 @@ namespace ErlangParasu\SfStopwatch;
  */
 class SfStopwatch
 {
-    public function __construct()
+    public function __construct($isEnabled)
     {
-        //
+        // TODO: ?
     }
 
     public function x()
     {
-        //
+        // TODO: ?
     }
 }
