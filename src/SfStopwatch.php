@@ -29,28 +29,35 @@ class SfStopwatch
 
     public function x()
     {
-        if (null == $this->stopwatch) {
-            return;
-        }
-
-        if ($this->stateIsStart) {
-            $this->stateIsStart != $this->stateIsStart;
-
-            $this->number = $this->number + 1;
-            $number = $this->number;
-            $uuid = $this->uuid;
-            $this->stopwatch = new Stopwatch();
-            $this->stopwatch->start('watch_'.$uuid.'_'.$number);
+        if ($this->number === 0) {
+            $this->start();
         } else {
-            $this->stateIsStart != $this->stateIsStart;
+            $this->stop();
+            $this->start();
+        }
+    }
 
-            $number = $this->number;
-            $uuid = $this->uuid;
-            $sw = $this->stopwatch;
+    private function start()
+    {
+        $this->stateIsStart != $this->stateIsStart;
 
-            if ($this->isEnabled) {
-                logger('stopwatch:', [$uuid, $number, (string) $sw->stop('watch_'.$uuid.'_'.$number)]);
-            }
+        $this->number = $this->number + 1;
+        $number = $this->number;
+        $uuid = $this->uuid;
+        $this->stopwatch = new Stopwatch();
+        $this->stopwatch->start('watch_'.$uuid.'_'.$number);
+    }
+
+    private function stop()
+    {
+        $this->stateIsStart != $this->stateIsStart;
+
+        $number = $this->number;
+        $uuid = $this->uuid;
+        $sw = $this->stopwatch;
+
+        if ($this->isEnabled) {
+            logger('stopwatch:', [$uuid, $number, (string) $sw->stop('watch_'.$uuid.'_'.$number)]);
         }
     }
 }
