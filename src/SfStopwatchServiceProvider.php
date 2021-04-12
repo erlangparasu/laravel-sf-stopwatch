@@ -2,9 +2,9 @@
 
 namespace ErlangParasu\SfStopwatch;
 
+use ErlangParasu\SfStopwatch\SfStopwatch;
 use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
-use ErlangParasu\SfStopwatch\SfStopwatch;
 use Laravel\Lumen\Application as LumenApplication;
 
 /**

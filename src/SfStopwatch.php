@@ -57,7 +57,7 @@ class SfStopwatch
         $sw = $this->stopwatch;
 
         if ($this->isEnabled) {
-            logger('stopwatch:', [$uuid, $number, (string) $sw->stop('watch_'.$uuid.'_'.$number)]);
+            logger('stopwatch:', [(string) $sw->stop('watch_'.$uuid.'_'.$number)]);
         }
     }
 }

@@ -1,5 +1,5 @@
 {
-    "name" : "erlangp/laravel-sf-stopwatch",
+    "name" : "erlangparasu/laravel-sf-stopwatch",
     "description" : "A package to log execution time",
     "authors": [
         {
