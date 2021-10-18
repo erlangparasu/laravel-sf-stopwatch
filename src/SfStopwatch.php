@@ -23,8 +23,13 @@ class SfStopwatch
     public function __construct($isEnabled)
     {
         $this->isEnabled = $isEnabled;
-        $this->uuid = strtoupper(\Str::random(8));
         $this->stopwatch = new Stopwatch(true);
+
+        try {
+            $this->uuid = strtoupper(\Str::random(8));
+        } catch (\Throwable $th) {
+            $this->uuid = strtoupper(str_random(8));
+        }
     }
 
     public function x()
