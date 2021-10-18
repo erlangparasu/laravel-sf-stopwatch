@@ -10,15 +10,15 @@ use Symfony\Component\Stopwatch\Stopwatch;
  */
 class SfStopwatch
 {
-    private $stopwatch = null;
+    protected $stopwatch = null;
 
-    private $stateIsStart = true;
+    protected $stateIsStart = true;
 
-    private $uuid = '';
+    protected $uuid = '';
 
-    private $number = 0;
+    protected $number = 0;
 
-    private $isEnabled = false;
+    protected $isEnabled = false;
 
     public function __construct($isEnabled)
     {
@@ -37,7 +37,7 @@ class SfStopwatch
         }
     }
 
-    private function start()
+    protected function start()
     {
         $this->stateIsStart != $this->stateIsStart;
 
@@ -48,7 +48,7 @@ class SfStopwatch
         $this->stopwatch->start('watch_'.$uuid.'_'.$number);
     }
 
-    private function stop()
+    protected function stop()
     {
         $this->stateIsStart != $this->stateIsStart;
 
