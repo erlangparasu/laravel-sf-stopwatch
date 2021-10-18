@@ -26,7 +26,7 @@ sf_stopwatch()->x();
 
 example output in `laravel.log`
 ```
-stopwatch: ["J365NJNH",1,"default/watch_J365NJNH_1: 34.50 MiB - 0 ms"]
-stopwatch: ["J365NJNH",2,"default/watch_J365NJNH_2: 34.50 MiB - 3005 ms"]
-stopwatch: ["J365NJNH",3,"default/watch_J365NJNH_3: 34.50 MiB - 0 ms"]
+[2021-10-18 11:30:18] local.DEBUG: stopwatch: ["default/watch_9KAH2MJ6_1: 22.00 MiB - 37 ms"] 
+[2021-10-18 11:30:23] local.DEBUG: stopwatch: ["default/watch_9KAH2MJ6_2: 22.00 MiB - 5031 ms"] 
+[2021-10-18 11:30:24] local.DEBUG: stopwatch: ["default/watch_9KAH2MJ6_3: 22.00 MiB - 25 ms"] 
 ```
