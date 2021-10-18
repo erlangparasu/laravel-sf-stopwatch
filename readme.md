@@ -9,13 +9,19 @@ composer require erlangp/laravel-sf-stopwatch
 
 ## How to use
 ```php
-sfsw()->x();
+sf_stopwatch()->x();
+
 echo 'Processing';
-sfsw()->x();
-sleep(3); // simulate long running task
-sfsw()->x();
+
+sf_stopwatch()->x();
+
+sleep(5); // example simulate long running task
+
+sf_stopwatch()->x();
+
 echo 'Done';
-sfsw()->x();
+
+sf_stopwatch()->x();
 ```
 
 example output in `laravel.log`
